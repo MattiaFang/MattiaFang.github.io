@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mattiafang.github.io</id>
     <title>MattiaFang&apos;s BLOG</title>
-    <updated>2021-10-16T07:58:52.076Z</updated>
+    <updated>2021-10-16T08:20:44.862Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mattiafang.github.io"/>
     <link rel="self" href="https://mattiafang.github.io/atom.xml"/>
@@ -10,6 +10,40 @@
     <logo>https://mattiafang.github.io/images/avatar.png</logo>
     <icon>https://mattiafang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, MattiaFang&apos;s BLOG</rights>
+    <entry>
+        <title type="html"><![CDATA[电脑使用技巧（Win10）]]></title>
+        <id>https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/</id>
+        <link href="https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/">
+        </link>
+        <updated>2021-10-16T07:59:57.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="-截图">- 截图</h2>
+<h3 id="1-win10截屏工具可设置快捷键如ctrlaltp">1、win10截屏工具（可设置快捷键，如<code>ctrl</code>+<code>alt</code>+<code>P</code>）</h3>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1634371339093.png" alt="" loading="lazy"></figure>
+<h3 id="2-win10-快捷键">2、win10 快捷键</h3>
+<ul>
+<li>按<code>prt scr</code>键，就会获取当前屏幕并存储在剪贴板上</li>
+<li>当前画面全屏截图（<code>win</code>+<code>prt scr</code>），存储在“此电脑-视频-捕获”目录下</li>
+<li>当前活动窗口全屏截图（<code>win</code>+<code>alt</code>+<code>prt scr</code>）,存储在“此电脑-视频-捕获”目录下</li>
+<li>按<code>win</code>+<code>Shift</code>+<code>S</code>组合键进入截屏模式，鼠标左键选择可截屏区域</li>
+<li>按<code>win</code>+<code>W</code>组合键，打开window Ink工作区，第三项是屏幕草图功能</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="-截图">- 截图</h2>
+<h3 id="1-win10截屏工具可设置快捷键如ctrlaltp">1、win10截屏工具（可设置快捷键，如<code>ctrl</code>+<code>alt</code>+<code>P</code>）</h3>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1634371339093.png" alt="" loading="lazy"></figure>
+<h3 id="2-win10-快捷键">2、win10 快捷键</h3>
+<ul>
+<li>按<code>prt scr</code>键，就会获取当前屏幕并存储在剪贴板上</li>
+<li>当前画面全屏截图（<code>win</code>+<code>prt scr</code>），存储在“此电脑-视频-捕获”目录下</li>
+<li>当前活动窗口全屏截图（<code>win</code>+<code>alt</code>+<code>prt scr</code>）,存储在“此电脑-视频-捕获”目录下</li>
+<li>按<code>win</code>+<code>Shift</code>+<code>S</code>组合键进入截屏模式，鼠标左键选择可截屏区域</li>
+<li>按<code>win</code>+<code>W</code>组合键，打开window Ink工作区，第三项是屏幕草图功能</li>
+</ul>
+<!-- more -->
+<h2 id="-未完待续">-未完待续</h2>
+<p>重在积累 😊</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://mattiafang.github.io/post/hello-gridea/</id>
