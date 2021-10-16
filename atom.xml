@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mattiafang.github.io</id>
-    <title>MattiaFang&apos;s BLOG</title>
-    <updated>2021-10-16T08:35:39.668Z</updated>
+    <title>Milano</title>
+    <updated>2021-10-16T09:24:14.996Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mattiafang.github.io"/>
     <link rel="self" href="https://mattiafang.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>FangMattia&apos;s BLOG
+ -- 温故而知新</subtitle>
     <logo>https://mattiafang.github.io/images/avatar.png</logo>
     <icon>https://mattiafang.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, MattiaFang&apos;s BLOG</rights>
+    <rights>All rights reserved 2021, Milano</rights>
     <entry>
         <title type="html"><![CDATA[电脑使用技巧（Win10）]]></title>
         <id>https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/</id>
