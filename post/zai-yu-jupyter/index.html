@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>再遇Jupyter | Milano</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mattiafang.github.io/favicon.ico?v=1634572826343">
+<link rel="stylesheet" href="https://mattiafang.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+1. 简介
+Jupyter Notebook是基于网页的用于交互计算的应用程序。
+其可被应用于全过程计算：开发、文档编写、运行代码和展示结果。
+——Jupyter Notebook官方介绍
+
+简而言之，Jupyter Notebook是以..." />
+    <meta name="keywords" content="python数据分析" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mattiafang.github.io">
+        <img src="https://mattiafang.github.io/images/avatar.png?v=1634572826343" class="site-logo">
+        <h1 class="site-title">Milano</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      FangMattia's BLOG
+ -- 温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mattiafang.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">再遇Jupyter</h2>
+            <div class="post-date">2021-10-18</div>
+            
+              <div class="feature-container" style="background-image: url('https://mattiafang.github.io/post-images/zai-yu-jupyter.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <!-- more -->
+<h2 id="1-简介">1. 简介</h2>
+<pre><code>Jupyter Notebook是基于网页的用于交互计算的应用程序。
+其可被应用于全过程计算：开发、文档编写、运行代码和展示结果。
+——Jupyter Notebook官方介绍
+</code></pre>
+<p>简而言之，Jupyter Notebook是以网页的形式打开，可以在网页页面中直接编写代码和运行代码，代码的运行结果也会直接在代码块下显示。如在编程过程中需要编写说明文档，可在同一个页面中直接编写，便于作及时的说明和解释。<br>
+在实际的运用上，对数据的灵活操作处理，Jupyter这种交互性很强的编译器能展示出比较好的优势。</p>
+<h2 id="2-组成形式">2、组成形式</h2>
+<p>① 网页应用<br>
+网页应用即基于网页形式的、结合了编写说明文档、数学公式、交互计算和其他富媒体形式的工具。简言之，网页应用是可以实现各种功能的工具。<br>
+② 文档<br>
+即Jupyter Notebook中所有交互计算、编写说明文档、数学公式、图片以及其他富媒体形式的输入和输出，都是以文档的形式体现的。<br>
+这些文档是保存为后缀名为.ipynb的JSON格式文件，不仅便于版本控制，也方便与他人共享。<br>
+此外，文档还可以导出为：HTML、LaTeX、PDF等格式。</p>
+<h3 id="3-jupyter-notebook的主要特点">3、 Jupyter Notebook的主要特点</h3>
+<ul>
+<li>编程时具有语法高亮、缩进、tab补全的功能。</li>
+<li>可直接通过浏览器运行代码，同时在代码块下方展示运行结果。</li>
+<li>以富媒体格式展示计算结果。富媒体格式包括：HTML，LaTeX，PNG，SVG等。</li>
+<li>对代码编写说明文档或语句时，支持Markdown语法。</li>
+<li>支持使用LaTeX编写数学性说明。</li>
+</ul>
+<h3 id="4-安装">4、安装</h3>
+<ul>
+<li>安装Jupyter Notebook的前提是需要安装了Python（3.3版本及以上）<br>
+1、如果已经安装Anconda的同学，恭喜你，很容易就操作，前两个就是。<br>
+<img src="https://mattiafang.github.io/post-images/1634571288375.PNG" alt="" loading="lazy"></li>
+</ul>
+<p>2、如果没有安装的同学，直接pip安装。（启动命令行中输入 jupyter notebook）<br>
+pip install jupyter</p>
+<p>如果你足够幸运，那么你将看到如下界面，就可以开始体验啦。<br>
+<img src="https://mattiafang.github.io/post-images/1634571661972.PNG" alt="主界面" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1634571676338.PNG" alt="编辑页面" loading="lazy"></figure>
+<h3 id="5-jupyter-notebook快捷键">5、Jupyter notebook快捷键</h3>
+<p>① 查看快捷键<br>
+① 进入Jupyter Notebook主界面“File”中。<br>
+② 在“New”的下拉列表中选择环境创建一个笔记本。<br>
+③ 点击“Help”。<br>
+④ 点击“Keyboard Shortcuts”。</p>
+<p><img src="https://mattiafang.github.io/post-images/1634572461846.PNG" alt="" loading="lazy"><br>
+<img src="https://mattiafang.github.io/post-images/1634572469610.PNG" alt="" loading="lazy"></p>
+<p>左侧颜色判断区块模式<br>
+<img src="https://mattiafang.github.io/post-images/1634572511409.PNG" alt="" loading="lazy"><br>
+<img src="https://mattiafang.github.io/post-images/1634572663702.PNG" alt="" loading="lazy"><br>
+绿色是编辑模式，蓝色是命令模式</p>
+<h3 id="参考资料">参考资料</h3>
+<p>https://www.jianshu.com/p/91365f343585</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mattiafang.github.io/tag/iTNlid_9P/" class="tag">
+                    python数据分析
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/">
+                  <h3 class="post-title">
+                    电脑使用技巧（Win10）
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '39492b627f7998f43559',
+        clientSecret: '774b5d75d10f63667b62be3c4a5c64747812d7d6',
+        repo: 'MattiaFang.github.io',
+        owner: 'MattiaFang',
+        admin: ['MattiaFang'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
