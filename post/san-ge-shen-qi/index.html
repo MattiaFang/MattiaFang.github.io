@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>三个神器 | Milano</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mattiafang.github.io/favicon.ico?v=1635700533509">
+<link rel="stylesheet" href="https://mattiafang.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+迭代器
+生成器
+装饰器
+
+
+迭代器
+迭代是Python中用于访问序列结构数据的一种方式。
+for i in range(10):
+    k = k + i
+
+可迭代器对象是可以被for循环遍历的对象。
+可迭代对象需要实现__iter__..." />
+    <meta name="keywords" content="python" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mattiafang.github.io">
+        <img src="https://mattiafang.github.io/images/avatar.png?v=1635700533509" class="site-logo">
+        <h1 class="site-title">Milano</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      FangMattia's BLOG
+ -- 温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mattiafang.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">三个神器</h2>
+            <div class="post-date">2021-10-23</div>
+            
+              <div class="feature-container" style="background-image: url('https://mattiafang.github.io/post-images/san-ge-shen-qi.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <ul>
+<li>迭代器</li>
+<li>生成器</li>
+<li>装饰器</li>
+</ul>
+<!-- more -->
+<h3>迭代器</h3>
+迭代是Python中用于访问序列结构数据的一种方式。
+<pre><code class="language-python">for i in range(10):
+    k = k + i
+</code></pre>
+<p>可迭代器对象是可以被for循环遍历的对象。<br><br>
+可迭代对象需要实现__iter__ 或者 __getitem__方法。<br><br>
+字典和列表都是可迭代对象。<br></p>
+<pre><code class="language-python">l = [1,2,3,4]
+l.__iter__
+from collections.abc import Iterable
+isinstance(list(),Iterable)
+</code></pre>
+<ul>
+<li>
+<p>迭代器是指遵循迭代器协议的对象。<br><br>
+迭代器协议：实现对象的__iter__和__next__方法，其中，__iter__方法返回迭代器对象本身，next（）方法返回容器的下一个元素，在没有后续元素时抛出StopIteration异常。<br><br>
+迭代对象不是迭代器。<br><br>
+使用iter()获取迭代器对象。<br></p>
+</li>
+<li>
+<p>迭代器是一个可以记住遍历位置的对象。<br><br>
+迭代器对象不可逆，用next（）取下一个。<br></p>
+</li>
+</ul>
+<h3>生成器</h3>
+<ul>
+<li>生成器：生成器是一类特殊的迭代器。<br></li>
+<li>生成器每次在迭代时可以返回一个或多个值，它可以记录当前的状态。<br></li>
+<li>生成器的创建方式：
+<ul>
+<li>使用yield关键字</li>
+<li>使用生成器表达式（推导式）</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python"># 推导式
+G = (x*2 for x in range(5))
+# yield
+def fib(n):
+    current = 0
+    num1,num2 = 0,1
+    while current &lt; n:
+        num = num1
+        num1,num2 = num2, num1+num2
+        current += 1
+        yield num
+    return &quot;done&quot;
+g=fib(s)
+type(g)
+</code></pre>
+<ul>
+<li>生成器可以使用next和send取值</li>
+</ul>
+<h3>装饰器</h3>.
+<ul>
+<li>闭包<br>
+闭包：是由函数及其相关的引用环境组合而成的实体。<br><br>
+不同编程语言实现闭包的方式不同的，Python中闭包从表现形式上看，如果在一个内部函数里，对在外部作用域（不是在全局作用域）的变量进行引用，那么内部函数就被认为是闭包。</li>
+</ul>
+<pre><code class="language-python">def func(x):
+    def inner(y):
+        return x+y
+    return inner
+</code></pre>
+<p>闭包中不可以直接修改外部函数的局部变量。</p>
+<ul>
+<li>类似于不能直接在函数中修改全局变量（可变类型除外），需要使用关键字<code>nonlocal</code></li>
+<li>闭包的作用：
+<ul>
+<li>但闭包执行完后，仍然能够保持当前的运行环境</li>
+<li>闭包可以根据外部作用域的局部变量来得到不同的结果</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">def func1(func):
+    def inner():
+        print(&quot;func1&quot;)
+        func()
+    return inner
+def func2():
+    print(&quot;func2&quot;)
+func1(func2)()
+</code></pre>
+<ul>
+<li>装饰器
+<ul>
+<li>装饰器本质是一个python函数，它可以在不改变代码结构的情况下给代码添加新的功能。</li>
+<li>装饰器的工作过程：将被装饰的函数当作参数传递给装饰器函数（名称相同的函数），并返回装饰后被装饰的函数。</li>
+<li>装饰器是闭包的一种应用。</li>
+<li>装饰器的使用：</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">@装饰器函数
+def func():
+    pass
+</code></pre>
+<ul>
+<li>装饰器的作用
+<ul>
+<li>扩展函数功能</li>
+<li>不会改变原有函数代码，但是会丢失一部分信息：被装饰函数的元信息会丢失。</li>
+<li>wraps为了保留因为使用装饰器而丢失的信息，可以使用Python中本身提供的装饰器@warps来解决。</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">from functools import wraps
+def light(func):
+    print(&quot;获得神光棒*1&quot;)
+    @wraps(func)
+    def tiga()
+        func()
+        print(&quot;叮~，\n我是光之巨人&quot;)
+    return tiga
+@light
+def person():
+    &quot;&quot;&quot;我想打怪兽&quot;&quot;&quot;
+    print(&quot;我是某胜利队队员大骨&quot;)
+person()
+help(person)
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1635609652797.PNG" alt="" loading="lazy"></figure>
+<ul>
+<li>被装饰函数的参数
+<ul>
+<li>当被装饰函数拥有参数时，如何在装饰器过程中进行传递？</li>
+<li>如何构建一个通用的装饰器？</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">from functools import wraps
+def func1(func):
+    @wraps(func)
+    def inner(a,b):
+        print(&quot;func1&quot;)
+        func(a,b)
+    return inner
+@func1
+def func2(a,b):
+    print(a+b)
+func2(a,b)
+</code></pre>
+<ul>
+<li>带有参数的装饰器
+<ul>
+<li>如何通过装饰器的参数来控制装饰器？</li>
+<li>通过外部参数，返回一个装饰器</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">def Decorator(name = None,level=&quot;普通会员&quot;)
+    def outer(func):
+        def inner(name):
+            print(&quot;欢迎登录，%s&quot;% level)
+            func(name)
+        return inner
+    return outer
+@Decorator(level = &quot;SVIP&quot;)
+def func(name):
+    print(name)
+func(&quot;张三&quot;)
+</code></pre>
+<ul>
+<li>装饰器与类
+<ul>
+<li>装饰器不仅可以是函数，还可以是类（同样，装饰器不仅可以装饰函数，还可以装饰类）</li>
+<li>装饰器装饰类</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">def singleton(cls,*args,**kw):
+    instance={}
+    def _singleton():
+        if cls not in instance:
+            instance[cls] = cls(*args,**kw)
+        return instance[cls]
+    return _singleton
+@singleton
+class Singleton(object):
+    def __init__(self):
+        self.num_sum = 0
+    def add(self):
+        self.num_sum=100
+</code></pre>
+<ul>
+<li>将装饰器定义为类的形式。</li>
+<li><strong>call</strong>:魔法方法，可以让类像方法一样被调用。</li>
+</ul>
+<pre><code class="language-python">import time
+class Wrapper():
+    def __init__(self,func):
+        self.func = func
+    def __call__(self,*args,**kwargs):
+        start = time.time()
+        result = self.func(*args,**kwargs)
+        end = time.time()
+        print(end - start)
+        return result
+@Warpper
+def func(num):
+    time.sleep(3)
+    return num
+func(1)
+</code></pre>
+<ul>
+<li>多个装饰器</li>
+</ul>
+<pre><code class="language-python">def Tiga(func):
+    print(&quot;给我力量吧，Tiga&quot;)
+    def tiga():
+        func()
+        print(&quot;获得Tiga的力量&quot;)
+    return tiga
+def Dyna(func):
+    print(&quot;给我力量吧，Dyna&quot;)
+    def dyna()
+        func()
+        print(&quot;获得Dyna的力量&quot;)
+    return dyna
+def Gaia(func):
+    print(&quot;给我力量吧，Gaia&quot;)
+    def gaia():
+        func()
+        print(&quot;获得Gaia的力量&quot;)
+    return gaia
+
+@Tiga
+@Dyna
+@Gaia
+def Z():
+    print(&quot;变身&quot;)
+Z()
+
+# 给我力量吧，Gaia
+# 给我力量吧，Dyna
+# 给我力量吧，Tiga
+# 变身
+# 获得Gaia的力量
+# 获得Dyna的力量
+# 获得Tiga的力量
+</code></pre>
+<ul>
+<li>解除装饰器</li>
+</ul>
+<pre><code class="language-python">def light(func):
+    print(&quot;获得神光棒*1&quot;)
+    @wraps(func)
+    def tiga():
+        func()
+        print(&quot;叮~，我是光之巨人&quot;)
+    return tiga
+@light
+def person():
+    print(&quot;我是某胜利队队员大骨&quot;)
+person()
+DaGu = person.__wrapped__
+DaGU()
+# 我是某胜利队队员大骨    
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mattiafang.github.io/tag/IP7fK6hPa/" class="tag">
+                    python
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mattiafang.github.io/post/zai-yu-jupyter/">
+                  <h3 class="post-title">
+                    再遇Jupyter
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '39492b627f7998f43559',
+        clientSecret: '774b5d75d10f63667b62be3c4a5c64747812d7d6',
+        repo: 'MattiaFang.github.io',
+        owner: 'MattiaFang',
+        admin: ['MattiaFang'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
