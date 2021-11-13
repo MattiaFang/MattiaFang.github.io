@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Milano</title>
+<title>Leetcode-07 整数反转 | Milano</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,16 +24,14 @@
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
+    <meta name="description" content="参考：
+Python中[:]与[::]的用法
 
-🏠 关于本站
-2021年10月16日上线，分享好玩有趣的事情~
-👨‍💻 博主是谁
-MattiaFang，一个喜欢分享的小码农👱。
-⛹ 兴趣爱好
-喝咖啡☕️、吃美食🍝、旅行🚀、做梦🌠
-..." />
+class Solution:
+    def reverse(self, x: int) -&gt; int:
+        if x==0:
+            return 0
+ ..." />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -106,24 +104,40 @@ MattiaFang，一个喜欢分享的小码农👱。
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2021-10-16</div>
+            <h2 class="post-title">Leetcode-07 整数反转</h2>
+            <div class="post-date">2021-11-14</div>
             
             <div class="post-content" v-pre>
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>2021年10月16日上线，分享好玩有趣的事情~</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>MattiaFang，一个喜欢分享的小码农👱。</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>喝咖啡☕️、吃美食🍝、旅行🚀、做梦🌠</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>👉 574595399@qq.com 😎</p>
+              <p>参考：<br>
+<a href="https://blog.csdn.net/u011863024/article/details/109585500?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link">Python中[:]与[::]的用法</a></p>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1636820574804.PNG" alt="" loading="lazy"></figure>
+<pre><code class="language-python">class Solution:
+    def reverse(self, x: int) -&gt; int:
+        if x==0:
+            return 0
+        str_x = str(x)
+        x = ''
+        if str_x[0]=='-':
+            x += '-'
+        x += str_x[len(str_x)-1::-1].lstrip(&quot;0&quot;).rstrip(&quot;-&quot;)
+        x = int(x)
+        if -2**31&lt;x&lt;2**31-1:
+            return x
+        return 0
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://mattiafang.github.io/post-images/1636820835883.PNG" alt="" loading="lazy"></figure>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mattiafang.github.io/post/leetcode01-liang-shu-xiang-jia/">
+                  <h3 class="post-title">
+                    Leetcode01 - 两数相加
+                  </h3>
+                </a>
+              </div>
             
 
             
