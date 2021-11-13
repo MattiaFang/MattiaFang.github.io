@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>电脑小能手 | Milano</title>
+<title>Leetcode01 - 两数相加 | Milano</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -12,14 +12,24 @@
 <link rel="stylesheet" href="https://mattiafang.github.io/styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
 
-    <meta name="description" content="FangMattia&#39;s BLOG
- -- 温故而知新">
+    <meta name="description" content="第一想到的是双重遍历，不过会超时
+
+所以要想到哈希，要使用python中一个内置函数，代码就非常简单
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -&..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -90,33 +100,48 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 电脑小能手</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/">
-                  <h2 class="post-title">截图小能手（Win10）</h2>
-                </a>
-                <div class="post-date">
-                  2021-10-16
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="https://mattiafang.github.io/post/dian-nao-shi-yong-ji-qiao-win10/">
-                  <div class="feature-container" style="background-image: url('https://mattiafang.github.io/post-images/dian-nao-shi-yong-ji-qiao-win10.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">Leetcode01 - 两数相加</h2>
+            <div class="post-date">2021-11-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>第一想到的是双重遍历，不过会超时<br>
+<img src="https://mattiafang.github.io/post-images/1636816418146.PNG" alt="" loading="lazy"></p>
+<p>所以要想到哈希，要使用python中一个内置函数，代码就非常简单</p>
+<pre><code class="language-python">class Solution:
+    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:
+        hashmap = {}
+        for index,num in enumerate(nums):
+            another_num = target - num
+            if another_num in hashmap:
+                return [hashmap[another_num],index]
+            hashmap[num] = index
+        return None
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1636813968464.PNG" alt="" loading="lazy"></figure>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mattiafang.github.io/post/a01-shu-ju-cang-ku-de-gai-nian-yu-ti-xi-jie-gou/">
+                  <h3 class="post-title">
+                    A01- 数据仓库的概念与体系结构
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -137,6 +162,29 @@ var app = new Vue({
 </script>
 
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '39492b627f7998f43559',
+        clientSecret: '774b5d75d10f63667b62be3c4a5c64747812d7d6',
+        repo: 'MattiaFang.github.io',
+        owner: 'MattiaFang',
+        admin: ['MattiaFang'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
