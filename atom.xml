@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mattiafang.github.io</id>
     <title>Milano</title>
-    <updated>2021-11-13T15:25:52.490Z</updated>
+    <updated>2021-11-13T15:50:07.255Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mattiafang.github.io"/>
     <link rel="self" href="https://mattiafang.github.io/atom.xml"/>
@@ -31,6 +31,22 @@
         return None
 </code></pre>
 <figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1636813968464.PNG" alt="" loading="lazy"></figure>
+<p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。<br>
+<strong>语法</strong><br>
+以下是 enumerate() 方法的语法:</p>
+<p>enumerate(sequence, [start=0])<br>
+<strong>参数</strong><br>
+sequence -- 一个序列、迭代器或其他支持迭代对象。<br>
+start -- 下标起始位置。<br>
+<strong>返回值</strong><br>
+返回 enumerate(枚举) 对象。</p>
+<p><strong>实例</strong><br>
+以下展示了使用 enumerate() 方法的实例：</p>
+<pre><code>&gt;&gt;seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+&gt;&gt;list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+&gt;&gt;list(enumerate(seasons, start=1))       # 下标从 1 开始
+[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]</code></pre>
 ]]></content>
     </entry>
     <entry>
