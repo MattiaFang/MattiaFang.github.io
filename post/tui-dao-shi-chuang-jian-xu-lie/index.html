@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Leetcode07 - 整数反转 | Milano</title>
+<title>推导式创建序列 | Milano</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -24,15 +24,10 @@
 
 
 
-    <meta name="description" content="参考：
-Python中[:]与[::]的用法
-
-class Solution:
-    def reverse(self, x: int) -&gt; int:
-        if x==0:
-            return 0
- ..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="推导式是从一个或者多个迭代器快速创建序列的一种方法。它可以将循环和条件判断结合，从而避免冗长的代码。推导式是典型的Python风格，会使用的人已经超过Python初学者的水平。
+1、 列表推导式
+列表推导式生成列表对象，语法:[表达式 fo..." />
+    <meta name="keywords" content="python" />
   </head>
   <body>
     <div id="app" class="main">
@@ -112,37 +107,96 @@ class Solution:
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Leetcode07 - 整数反转</h2>
-            <div class="post-date">2021-11-14</div>
+            <h2 class="post-title">推导式创建序列</h2>
+            <div class="post-date">2021-11-20</div>
             
             <div class="post-content" v-pre>
-              <p>参考：<br>
-<a href="https://blog.csdn.net/u011863024/article/details/109585500?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.no_search_link">Python中[:]与[::]的用法</a></p>
-<figure data-type="image" tabindex="1"><img src="https://mattiafang.github.io/post-images/1636820574804.PNG" alt="" loading="lazy"></figure>
-<pre><code class="language-python">class Solution:
-    def reverse(self, x: int) -&gt; int:
-        if x==0:
-            return 0
-        str_x = str(x)
-        x = ''
-        if str_x[0]=='-':
-            x += '-'
-        x += str_x[len(str_x)-1::-1].lstrip(&quot;0&quot;).rstrip(&quot;-&quot;)
-        x = int(x)
-        if -2**31&lt;x&lt;2**31-1:
-            return x
-        return 0
+              <p>推导式是从一个或者多个迭代器快速创建序列的一种方法。它可以将循环和条件判断结合，从而避免冗长的代码。推导式是典型的Python风格，会使用的人已经超过Python初学者的水平。</p>
+<h3 id="1-列表推导式">1、 列表推导式</h3>
+<p>列表推导式生成列表对象，语法:<br>[表达式 for item in 可迭代对象]<br><br>
+[表达式 for item in 可迭代对象 if 条件判断]</p>
+<pre><code class="language-python">[x for x in range(1,5)]
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://mattiafang.github.io/post-images/1636820835883.PNG" alt="" loading="lazy"></figure>
+<pre><code>[1, 2, 3, 4]
+</code></pre>
+<pre><code class="language-python">[x*2 for x in range(1,5)]
+</code></pre>
+<pre><code>[2, 4, 6, 8]
+</code></pre>
+<pre><code class="language-python">[x*2 for x in range(1,5) if x%4 == 0]
+</code></pre>
+<pre><code>[8]
+</code></pre>
+<pre><code class="language-python">[a for a in &quot;abcdefg&quot;]
+</code></pre>
+<pre><code>['a', 'b', 'c', 'd', 'e', 'f', 'g']
+</code></pre>
+<pre><code class="language-python">cells = [(row,col) for row in range(1,10) for col in range(1,10)] # 可以使用两个循环
+print(cells)
+</code></pre>
+<pre><code>[(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9)]
+</code></pre>
+<h3 id="2-字典推导式">2、字典推导式</h3>
+<pre><code class="language-python">my_text = &quot;my name is Hangwuchen!&quot;
+</code></pre>
+<pre><code class="language-python"># 统计文本字符出现的次数
+char_count = {c:my_text.count(c) for c in my_text}
+char_count
+</code></pre>
+<pre><code>{'m': 2,
+ 'y': 1,
+ ' ': 3,
+ 'n': 3,
+ 'a': 2,
+ 'e': 2,
+ 'i': 1,
+ 's': 1,
+ 'H': 1,
+ 'g': 1,
+ 'w': 1,
+ 'u': 1,
+ 'c': 1,
+ 'h': 1,
+ '!': 1}
+</code></pre>
+<h3 id="3-集合推导式">3、集合推导式</h3>
+<pre><code class="language-python">{x for x in range(1,100) if x%9 ==0} # 不重复元素
+</code></pre>
+<pre><code>{9, 18, 27, 36, 45, 54, 63, 72, 81, 90, 99}
+</code></pre>
+<h3 id="4-生成器推导式生成元组">4、生成器推导式（生成元组）</h3>
+<pre><code class="language-python">(x for x in range(1,100) if x%9 == 0)
+</code></pre>
+<pre><code>&lt;generator object &lt;genexpr&gt; at 0x008AD108&gt;
+</code></pre>
+<pre><code class="language-python">gnt = (x for x in range(1,100) if x%9 ==0)
+for i in gnt:
+    print(i,end=&quot; &quot;)
+</code></pre>
+<pre><code>9 18 27 36 45 54 63 72 81 90 99 
+</code></pre>
+<pre><code class="language-python">for i in gnt:
+    print(i,end=&quot; &quot;)
+</code></pre>
+<p>生成器只能运行一次，第一次迭代可以得到数据，第二次没有了</p>
+<!-- more -->
 
             </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://mattiafang.github.io/tag/IP7fK6hPa/" class="tag">
+                    python
+                  </a>
+                
+              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://mattiafang.github.io/post/leetcode01-liang-shu-xiang-jia/">
+                <a href="https://mattiafang.github.io/post/leetcode-07-zheng-shu-fan-zhuan/">
                   <h3 class="post-title">
-                    Leetcode01 - 两数相加
+                    Leetcode07 - 整数反转
                   </h3>
                 </a>
               </div>
